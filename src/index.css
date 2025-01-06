@@ -79,7 +79,7 @@ div#root {
   width: 74vw;
 }
 .container p {
-  margin-bottom: 100px;
+  margin-bottom: 40px;
 }
 
 .input_fields textarea {
@@ -97,5 +97,12 @@ div#root {
   justify-content: center;
 }
 p.response {
+  margin-bottom: 50px;
+}
+
+.head {
+  padding: 20px;
+  border: 1px solid #ffffff33;
+  border-radius: 10px;
   margin-bottom: 50px;
 }

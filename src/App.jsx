@@ -10,11 +10,12 @@ const LangflowComponent = () => {
   const responseRef = useRef(null);
 
   const handleSubmit = async () => {
+    setInputValue("")
     const langflowClient = new LangflowClient(
       "/api",
-      "AstraCS:cDWFtegIZKOImAgNttuFoJDK:dcdb7208f93bbd617a61c3f77770998b80ca171a29188a3d30fe20a6fdd905fc"
+      import.meta.env.VITE_LANGFLOW_TOKEN
     );
-
+    console.log(import.meta.env.VITE_LANGFLOW_TOKEN);
     const tweaks = {
       // Your tweaks configuration here
     };
@@ -53,13 +54,16 @@ const LangflowComponent = () => {
   }, [response]);
   return (
     <div className="container">
-      <h1>SocioFlow-AI: Social Media Analytics Tool</h1>
+    <div className="head">
+    <h1>SocioFlow-AI: Social Media Analytics Tool</h1>
       <p>
         This is to analyze engagement data from mock social media accounts,
         leveraging LangFlow and DataStax Astra DB. The module will provide
         actionable insights into the performance of different types of social
         media posts (e.g., carousels, reels, and static images).
       </p>
+    </div>
+    
 
       {isLoading ? (
         <p className="loading">Fetching response...</p>
