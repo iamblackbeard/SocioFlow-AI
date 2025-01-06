@@ -15,7 +15,6 @@ const LangflowComponent = () => {
       "/api",
       import.meta.env.VITE_LANGFLOW_TOKEN
     );
-    console.log(import.meta.env.VITE_LANGFLOW_TOKEN);
     const tweaks = {
       // Your tweaks configuration here
     };
